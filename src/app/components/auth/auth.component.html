@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-12 col-md-8 col-lg-5">
+      <br />
+      <div class="row justify-content-md-center">
+        <img src="http://www.agropetsupply.com/t/uploads/registrateb226f.png/340/170" alt="Gas"
+          class="img-fluid rounded">
+      </div>
+      <br><br>
+
+      <div class="card">
+        <div class="card-footer bg-dark">
+          <h5 class="text-light text-center">SISTEMA DE REGISTRO ADUANAL DE TRANSPORTE PESADO DE CARGA</h5>
+        </div>
+        <form [formGroup]="formLogin" (submit)="login()">
+        <div class="card-body bg-dark">
+          
+          <div class="form-group">
+              <label for="inputEmail1" class="text-light">Usuario</label>
+              <input type="email" class="form-control" id="username" aria-describedby="ayudaCorreo"
+                placeholder="Ingrese su usuario" formControlName="username">
+              <small id="ayudaCorreo" class="text-light" class="form-text ">No compartiremos tus datos con nadie
+                más.</small>
+          </div>
+          <div class="form-group">
+            <label for="inputContraseña" class="text-light">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" formControlName="password">
+          </div>
+            
+        </div>
+        <div class="card-footer bg-dark">
+          <button>Iniciar Sesión</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

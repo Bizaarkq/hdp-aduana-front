@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" disabled><img src="https://icon-library.com/images/form-icon/form-icon-5.jpg" width="35"
+            height="35" class="d-inline-block align-top" alt="">
+        Sistema de Registro Aduanal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="">Gestionar Archivo<span class="sr-only">(current)</span></a>
+        </div>
+    </div>
+</nav>
+<br>
+
+<br><br><br><br>
+<h1 class="text-center">BIENVENIDOS/AS AL </h1><br><br>
+<h1 class="text-center">SISTEMA DE REGISTRO ADUANAL</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Numero_registro</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let archivo of archivos; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ archivo.numero_registro }}</td>
+            <td>{{ archivo.aprobado ? "Aprobado" : "Pendiente Aprobacion" }}</td>
+            <td>
+                <button *ngIf="tipo_usuario=='aduana-admin'" class="btn btn-success" (click)="aprobarArchivo(archivo.numero_registro)">Aprobar</button>
+                <button class="btn btn-primary" (click)="verArchivo(archivo.numero_registro)">Ver</button>
+                <button class="btn btn-warning" (click)="editarArchivo(archivo.numero_registro)">Editar</button>
+                <button class="btn btn-danger" (click)="eliminarArchivo(archivo.numero_registro)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
