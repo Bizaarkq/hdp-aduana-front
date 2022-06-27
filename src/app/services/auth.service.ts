@@ -195,6 +195,6 @@ export class AuthService {
   }
 
   desloguearse(){
-    localStorage.removeItem("token");
+    localStorage.clear();
   }
 }

@@ -21,7 +21,7 @@
 <h1 class="text-center">BIENVENIDOS/AS AL </h1><br><br>
 <h1 class="text-center">SISTEMA DE REGISTRO ADUANAL</h1>
 
-
+<a *ngIf="tipo_usuario!='aduana-admin'" class="btn btn-primary" [routerLink]="[ '/archivo']">Nuevo Archivo</a>
 <table class="table table-striped">
     <thead>
         <tr>
