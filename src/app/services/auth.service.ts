@@ -193,4 +193,8 @@ export class AuthService {
       })
     );
   }
+
+  desloguearse(){
+    localStorage.removeItem("token");
+  }
 }

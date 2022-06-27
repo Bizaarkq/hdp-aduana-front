@@ -61,4 +61,9 @@ export class InicioComponent implements OnInit {
       }
     });
   }
+
+  desloguearse(){
+    this.authService.desloguearse();
+    this.router.navigate(['/auth']);
+  }
 }
